@@ -94,10 +94,5 @@ proc simulate_gate {gate} {
 		
 } 
 
-	
-
-
 set gate {nor G4 x2 {0 0 } 1}
 set gate  [simulate_gate $gate ]
-
-
