@@ -198,4 +198,4 @@ if __name__ == "__main__":
     connect_nets_to_gates()
     report()
     input_vector = [0,0,1,0,1]
-    event_driven_simualtion(input_vector)
+    #event_driven_simualtion(input_vector)
