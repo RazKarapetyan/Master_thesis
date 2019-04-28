@@ -111,10 +111,10 @@ void Output::CreateToolBar(int hoverdItem) const {
 	pWind->DrawRectangle(0, 0, UI.Width, UI.ToolBarHeight);
 
 //	// Draw menu item one image at a time
-	//for (int i = 0; i < TOOLS_COUNT; i++) {
-	//	dir = "Images\\menu\\toolbar\\" + states[i] + toolBarImages[i];
-	//	pWind->DrawImage(dir, i * UI.ToolItemWidth, 0, UI.ToolItemWidth, UI.ToolBarHeight);
-	//}
+	for (int i = 0; i < TOOLS_COUNT; i++) {
+		dir = "Images\\menu\\toolbar\\" + states[i] + toolBarImages[i];
+		pWind->DrawImage(dir, i * UI.ToolItemWidth, 0, UI.ToolItemWidth, UI.ToolBarHeight);
+	}
 }
 
 /* Draws the the gate bar */
@@ -149,26 +149,16 @@ void Output::CreateGateBar(int hoverdItem) const {
 	}
 
 	// Draw menu item one image at a time
-	for (int i = 0; i <= 5; i++) {
+	for (int i = 0; i <GATES_COUNT; i++) {
 		dir = "Images\\menu\\gatebar\\" + states[i] + gateBarImages[i];
 		pWind->DrawImage(dir, i * UI.GateItemWidth, UI.ToolBarHeight, UI.GateItemWidth, UI.GateBarHeight);
 	}
 
-		dir = "Images\\menu\\gatebar\\" + states[11] + gateBarImages[11];
-		pWind->DrawImage(dir, 6 * UI.GateItemWidth, UI.ToolBarHeight, UI.GateItemWidth, UI.GateBarHeight);
-
-		dir = "Images\\menu\\gatebar\\" + states[12] + gateBarImages[12];
-		pWind->DrawImage(dir, 7 * UI.GateItemWidth, UI.ToolBarHeight, UI.GateItemWidth, UI.GateBarHeight);
-
-		dir = "Images\\menu\\gatebar\\" + states[13] + gateBarImages[13];
-		pWind->DrawImage(dir, 8 * UI.GateItemWidth, UI.ToolBarHeight, UI.GateItemWidth, UI.GateBarHeight);
-
-
 	// Draw a separator line between tool bar and gate bar
-	//pWind->SetPen(WHITE, 1);
-	//pWind->DrawLine(UI.TextMargin, UI.ToolBarHeight, UI.Width - UI.TextMargin, UI.ToolBarHeight);
-
-	//pWind->UpdateBuffer();
+	pWind->SetPen(WHITE, 1);
+	pWind->DrawLine(UI.TextMargin, UI.ToolBarHeight, UI.Width - UI.TextMargin, UI.ToolBarHeight);
+	
+	pWind->UpdateBuffer();
 }
 
 /* Draws the status bar */
