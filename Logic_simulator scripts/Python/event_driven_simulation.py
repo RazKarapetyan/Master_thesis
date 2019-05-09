@@ -163,7 +163,7 @@ def event_driven_simualtion(input_vector):
   		if net.value != net.old_value:
   			net_queue.put(net)
 	
-
+  			
 	# main process  of simulation  
   	while not net_queue.empty():
 		#finding gates,whose inputs are the changed nets
